@@ -1,12 +1,30 @@
-import React from 'react';
+    // Création de l'App Compteurs ou "count"
 
-const Counter = ({ onClickAdd, onClickSubstract }) => {
+import React, { useState } from 'react';
+import Counter from './Counter';
+
+const App = () => {
+
+  // Création un state nommé "count" dans App.jsx
+
+  const [count, setCount] = useState(0);
+
+  // Création de gestionnaires d'événement onClickAdd et onClickSubstract dans App
+
+  const onClickAdd = () => {
+    setCount(count + 1);
+  };
+
+  const onClickSubstract = () => {
+    setCount(count - 1);
+  };
+
   return (
     <div>
-      <button onClick={onClickAdd}>+</button>
-      <button onClick={onClickSubstract}>-</button>
+      <h1>Compteur: {count}</h1>
+      <Counter onClickAdd={onClickAdd} onClickSubstract={onClickSubstract} />
     </div>
   );
-};
+}
 
-export default Counter;
+export default App;
