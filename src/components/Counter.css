@@ -1,0 +1,38 @@
+/* src/Counter.css */
+.counter {
+    text-align: center;
+    background-color: #007bff; /* Couleur bleue */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .counter-value {
+    font-size: 3rem;
+    margin: 20px 0;
+  }
+  
+  .counter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btn-add {
+    background-color: #28a745; /* Vert pour le bouton + */
+  }
+  
+  .btn-substract {
+    background-color: #dc3545; /* Rouge pour le bouton - */
+  }
+  

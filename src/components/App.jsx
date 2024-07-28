@@ -1,28 +1,34 @@
-  // Creation de l'App
 
-  import React, { useState } from 'react';
+// Création de App
+
+import React, { useState } from 'react';
 import Counter from './Counter';
 
-  const App = () => {
-    // Création d'un state qui s'appellera "count" 
+
+  //  Création de "state" 
+
+    const App = () => {
     const [count, setCount] = useState(0);
+  
 
-    // Création des gestionnaires d'événement onClickAdd & onClickSubstract 
+  //  Création onClickAdd et onClickSubstract 
 
-    const onClickAdd = () => {
-      setCount(count + 1);
-    };
-
-    const onClickSubstract = () => {
-      setCount(count - 1);
-    };
-
-    return (
-      <div>
-        <h1>Counter: {count}</h1>
-        <Counter onClickAdd={onClickAdd} onClickSubstract={onClickSubstract} />
-      </div>
-    );
+  const onClickAdd = () => {
+    setCount(count + 1);
   };
 
-  export default App;
+  const onClickSubstract = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div className="app-container">
+      <Counter
+        count={count}
+        onClickAdd={onClickAdd}
+        onClickSubstract={onClickSubstract} />
+    </div>
+  );
+}
+
+export default App;
