@@ -1,7 +1,7 @@
 
 // Création de App
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Counter from './Counter';
 
 
